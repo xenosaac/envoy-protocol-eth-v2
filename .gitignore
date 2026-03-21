@@ -1,0 +1,10 @@
+# Foundry
+framework_eth/contracts/cache/
+framework_eth/contracts/out/
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
