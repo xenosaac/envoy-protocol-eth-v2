@@ -1,0 +1,23 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["../../lib"]
+solc = "0.8.24"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+
+remappings = [
+    "@openzeppelin/contracts/=../../lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=../../lib/openzeppelin-contracts-upgradeable/contracts/",
+    "forge-std/=../../lib/forge-std/src/",
+    "@envoy-v1/=src/v1/"
+]
+
+[profile.default.fuzz]
+runs = 256
+
+[rpc_endpoints]
+sepolia = "${SEPOLIA_RPC_URL}"
+arbitrum = "${ARBITRUM_RPC_URL}"
+base = "${BASE_RPC_URL}"
